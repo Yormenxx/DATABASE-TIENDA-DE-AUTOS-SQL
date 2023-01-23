@@ -1,0 +1,22 @@
+#Lista el nombre de todos los productos que hay en la tabla producto.
+SELECT nombre FROM  producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto.
+SELECT nombre, precio FROM producto;
+#Lista todas las columnas de la tabla producto.
+SELECT * FROM  producto;
+#Lista el nombre de los productos, el precio en euros y el precio en dólares estadounidenses (USD).
+SELECT nombre, (precio/20) AS dolares, (precio/12) AS  euros FROM producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a mayúscula.
+SELECT UPPER(nombre) AS nombre,precio FROM producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a minúscula.
+SELECT LOWER(nombre) , precio FROM  producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto, convirtiendo los nombres a minúscula.
+SELECT UPPER(SUBSTRING(nombre,1,2)) AS nombre, precio FROM producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto, redondeando el valor del precio.
+SELECT nombre,ROUND(precio,2) AS precio FROM producto;
+#Lista los nombres y los precios de todos los productos de la tabla producto, truncando el valor del precio para mostrarlo sin ninguna cifra decimal.
+SELECT nombre, TRUNCATE(precio,0) AS precio FROM producto;
+#Lista el código de los fabricantes que tienen productos en la tabla producto.
+SELECT * FROM fabricante;
+#Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+SELECT DISTINCT codigo, nombre, precio  FROM producto;
