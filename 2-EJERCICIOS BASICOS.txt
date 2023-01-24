@@ -20,3 +20,6 @@ SELECT nombre, TRUNCATE(precio,0) AS precio FROM producto;
 SELECT * FROM fabricante;
 #Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
 SELECT DISTINCT codigo, nombre, precio  FROM producto;
+
+
+FUNCIONES
